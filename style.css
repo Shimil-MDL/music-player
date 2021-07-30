@@ -7,17 +7,20 @@ body{
     font-family: 'Roboto', sans-serif;
     position: relative;
     background: #707AFE;
+    background-image: url('./bg.svg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cover{
+/* .cover{
     object-fit: contain;
     height: 100%;
     width: 100%;
-}
+} */
 
 .player{
     width: 350px;
