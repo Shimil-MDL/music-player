@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: #212121;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cover{
+    object-fit: cover;
+}
+
+.player{
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 25px 5px;
+    background: rgba(255,255,255,0.1);
+    color: #373946;
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1), inset -5px -5px 10px rgba(255,255,255,0.5);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player .songImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('./src/img/orma.jpeg');
+    box-sizing: content-box;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3), -3px -3px 6px rgba(255,255,255,0.7);
+    border: 5px solid #E6ECFF;
+    background-size: cover;
+    background-position: center;
+
+    transition: opacity 0.5s;
+}
+.player .songTitle{
+    margin: -30px 0 -45px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    
+    transition: opacity 0.3s;
+    
+}
+.player .songArtist{
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.player .ctrl-btns{
+    --color:hsl(221, 71%, 66%); 
+    --color-hover:hsl(221, 59%, 57%); 
+
+    width: 70%;
+    height: 25%;
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.player .ctrl-btns i{
+    color: var(--color);
+    cursor: pointer;
+    transform: scale(1.4);
+    transition: 0.3s;
+}
+.player .ctrl-btns i:hover{
+    color: var(--color-hover);
+}
+.player .ctrl-btns .play{
+    background: var(--color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3), -2px -2px 4px rgba(255,255,255,0.3);
+    
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.player .ctrl-btns .play:hover{
+    background: var(--color-hover);
+}
+.player .ctrl-btns .play:active{
+    transition: 0.3s;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3), inset -2px -2px 4px rgba(255,255,255,0.3);
+}
+.player .ctrl-btns .play i{
+    transition: 0.3s;
+    color: #E6ECFF;
+}
